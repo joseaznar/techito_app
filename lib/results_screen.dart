@@ -226,7 +226,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
                   ),
                   Container(
                     child: Text(
-                      '☞ ${carbonFootprint * 64} árboles necesarios al año para mitigarlo',
+                      '🌳 ${carbonFootprint * 64} árboles necesarios al año para mitigarlo',
                       textAlign: TextAlign.start,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -240,7 +240,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
                   ),
                   Container(
                     child: Text(
-                      '☞ ${carbonFootprint * 0.04 * 10000} metros cuadrados del planeta para compensar por tu consumo',
+                      '🌎 ${carbonFootprint * 0.04 * 10000} metros cuadrados del planeta para compensar por tu consumo',
                       textAlign: TextAlign.start,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -274,7 +274,25 @@ class _ResultsScreenState extends State<ResultsScreen> {
                           height: 15,
                         ),
                         Text(
-                          'Según nuestros cálculos podrás ahorrar \$$ahorroLuz  anualmente con ayuda de TECHito.',
+                          'Según nuestros cálculos podrás ahorrar',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                            color: Colors.black,
+                          ),
+                        ),
+                        Text(
+                          '\$$ahorroLuz',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 25,
+                            color: Colors.black,
+                          ),
+                        ),
+                        Text(
+                          'anualmente con ayuda de TECHito.',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
@@ -332,7 +350,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
             width: MediaQuery.of(context).size.width,
             child: Container(
               decoration: BoxDecoration(
-                color: Theme.of(context).accentColor.withOpacity(0.5),
+                color: Theme.of(context).accentColor.withOpacity(0.9),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,

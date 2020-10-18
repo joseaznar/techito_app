@@ -112,8 +112,7 @@ class _FormScreenState extends State<FormScreen> {
                         _formData['personas'] = value;
                       },
                     ),
-                    buildSectionText(
-                        '¿De cuánto es tu recibo de luz (al mes)?', context),
+                    buildSectionText('¿Cuánto pagas de luz al mes?', context),
                     TextFormField(
                       keyboardType: TextInputType.number,
                       onSaved: (value) {
@@ -127,8 +126,7 @@ class _FormScreenState extends State<FormScreen> {
                         return null;
                       },
                     ),
-                    buildSectionText(
-                        '¿De cuánto es tu recibo de gas (al mes)?', context),
+                    buildSectionText('¿Cuánto pagas de gas al mes?', context),
                     TextFormField(
                       keyboardType: TextInputType.number,
                       onSaved: (value) {
@@ -179,7 +177,7 @@ class _FormScreenState extends State<FormScreen> {
                           .toList(),
                     ),
                     buildSectionText(
-                        '¿Cuántos horas promedio viajes en avión anualmente?',
+                        '¿Cuántos horas promedio viajas en avión anualmente?',
                         context),
                     TextFormField(
                       keyboardType: TextInputType.number,
@@ -194,7 +192,7 @@ class _FormScreenState extends State<FormScreen> {
                         return null;
                       },
                     ),
-                    buildSectionText('Dejanos tu correo electrónico', context),
+                    buildSectionText('Déjanos tu correo electrónico', context),
                     TextFormField(
                       keyboardType: TextInputType.emailAddress,
                       onSaved: (value) {
