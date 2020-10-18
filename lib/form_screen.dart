@@ -65,14 +65,6 @@ class _FormScreenState extends State<FormScreen> {
     final MainObject main = Provider.of<MainObject>(context, listen: false);
 
     return Scaffold(
-      bottomNavigationBar: BottomAppBar(
-        color: Theme.of(context).primaryColor,
-        child: Image.asset(
-          'assets/icon-techito.png',
-          fit: BoxFit.contain,
-          height: 100,
-        ),
-      ),
       key: _scaffoldKey,
       body: Stack(
         children: <Widget>[
@@ -222,8 +214,30 @@ class _FormScreenState extends State<FormScreen> {
                         false,
                       ),
                     ),
+                    SizedBox(
+                      height: 100,
+                    ),
                   ],
                 ),
+              ),
+            ),
+          ),
+          Positioned(
+            bottom: 0,
+            width: MediaQuery.of(context).size.width,
+            child: Container(
+              decoration: BoxDecoration(
+                color: Theme.of(context).primaryColor,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'assets/icon-techito.png',
+                    fit: BoxFit.contain,
+                    height: 80,
+                  ),
+                ],
               ),
             ),
           ),
