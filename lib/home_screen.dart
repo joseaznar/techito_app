@@ -1,6 +1,6 @@
-import 'package:app/form_screen.dart';
-import 'package:app/main_object.dart';
-import 'package:app/utils.dart';
+import './form_screen.dart';
+import './main_object.dart';
+import './utils.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

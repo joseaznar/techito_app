@@ -1,6 +1,6 @@
-import 'package:app/main_object.dart';
-import 'package:app/results_screen.dart';
-import 'package:app/utils.dart';
+import './main_object.dart';
+import './results_screen.dart';
+import './utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:provider/provider.dart';
@@ -208,13 +208,7 @@ class _FormScreenState extends State<FormScreen> {
                       onSaved: (value) {
                         _formData['correo'] = value;
                       },
-                      validator: (String value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Se require este campo';
-                        }
-
-                        return null;
-                      },
+                      validator: emailValidator,
                     ),
                     SizedBox(
                       height: 30,
@@ -236,5 +230,15 @@ class _FormScreenState extends State<FormScreen> {
         ],
       ),
     );
+  }
+
+  String emailValidator(String value) {
+    Pattern pattern =
+        r'^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,20})$';
+    RegExp regex = new RegExp(pattern);
+    if (!regex.hasMatch(value))
+      return 'Ponga un correo valido, por favor.';
+    else
+      return null;
   }
 }
